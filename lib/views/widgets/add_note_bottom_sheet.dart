@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/views/custom_button.dart';
-import 'package:notes_app/views/custom_text_field.dart';
+import 'package:notes_app/views/widgets/custom_button.dart';
+import 'package:notes_app/views/widgets/custom_text_field.dart';
 
-class AddNoteModelSheet extends StatelessWidget {
-  const AddNoteModelSheet({super.key});
+class AddNoteBottomSheet extends StatelessWidget {
+  const AddNoteBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 32, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
       child: Scrollable(viewportBuilder: (context, position) {
         return const SingleChildScrollView(
           child: Column(
@@ -26,7 +26,7 @@ class AddNoteModelSheet extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              CustomButton()
+              CustomButton(buttonTitle: 'Save')
             ],
           ),
         );
