@@ -7,26 +7,30 @@ class AddNoteModelSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(vertical: 32, horizontal: 16),
-      child: Column(
-        children: [
-          CustomTextField(
-            textFieldHint: 'Title',
+      child: Scrollable(viewportBuilder: (context, position) {
+        return const SingleChildScrollView(
+          child: Column(
+            children: [
+              CustomTextField(
+                textFieldHint: 'Title',
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomTextField(
+                maxLines: 5,
+                textFieldHint: 'Content',
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              CustomButton()
+            ],
           ),
-          SizedBox(
-            height: 20,
-          ),
-          CustomTextField(
-            maxLines: 5,
-            textFieldHint: 'Content',
-          ),
-          SizedBox(
-            height: 140,
-          ),
-          CustomButton()
-        ],
-      ),
+        );
+      }),
     );
   }
 }

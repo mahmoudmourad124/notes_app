@@ -12,10 +12,10 @@ class CustomButton extends StatelessWidget {
         color: kPrimaryColor,
       ),
       height: 50,
-      width: 500,
+      width: MediaQuery.of(context).size.width,
       child: const Center(
           child: Text(
-        'Add',
+        'Save',
         style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
       )),
     );
