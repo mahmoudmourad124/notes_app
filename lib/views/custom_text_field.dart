@@ -1,7 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -17,7 +14,7 @@ class CustomTextField extends StatelessWidget {
           maxLines: maxLines,
           decoration: InputDecoration(
               hintText: textFieldHint,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: kPrimaryColor,
               ),
               border: buildBorder(),
