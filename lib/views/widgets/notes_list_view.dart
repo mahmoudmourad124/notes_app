@@ -11,14 +11,14 @@ class NotesListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.only(
-            top: 8.0,
+            bottom: 8.0,
           ),
           child: GestureDetector(
             child: NoteItem(),
             onTap: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return const EditNoteView();
+                  return EditNoteView();
                 },
               ));
             },

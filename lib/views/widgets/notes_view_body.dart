@@ -17,7 +17,7 @@ class NotesViewBody extends StatelessWidget {
           ),
           Expanded(
               child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 16.0),
+            padding: EdgeInsets.only(bottom: 16.0),
             child: NotesListView(),
           )),
         ],
